@@ -32,6 +32,7 @@ This project was developed with the following technologies:
 
 - [React.js](https://reactjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
+- [Styled Components](https://styled-components.com/)
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 - [VS Code](https://code.visualstudio.com/)
