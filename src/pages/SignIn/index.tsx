@@ -14,7 +14,7 @@ import logoImg from '../../assets/logo.svg';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 
-import { Container, Content, AnimationContainer, Background } from './styles';
+import * as S from './styles';
 
 interface SignInFormData {
   email: string;
@@ -69,9 +69,9 @@ const SignIn: React.FC = () => {
   );
 
   return (
-    <Container>
-      <Content>
-        <AnimationContainer>
+    <S.Container>
+      <S.Content>
+        <S.AnimationContainer>
           <img src={logoImg} alt="Logo GoBarber" />
 
           <Form ref={formRef} onSubmit={handleSubmit}>
@@ -95,10 +95,10 @@ const SignIn: React.FC = () => {
             <FiLogIn />
             Criar conta
           </Link>
-        </AnimationContainer>
-      </Content>
-      <Background />
-    </Container>
+        </S.AnimationContainer>
+      </S.Content>
+      <S.Background />
+    </S.Container>
   );
 };
 

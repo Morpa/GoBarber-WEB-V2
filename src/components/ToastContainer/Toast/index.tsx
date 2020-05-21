@@ -8,7 +8,7 @@ import {
 
 import { ToastMessage, useToast } from '../../../hooks/toast';
 
-import { Container } from './styles';
+import * as S from './styles';
 
 interface ToastProps {
   message: ToastMessage;
@@ -35,7 +35,7 @@ const Toast: React.FC<ToastProps> = ({ message, style }) => {
   }, [removeToast, message.id]);
 
   return (
-    <Container
+    <S.Container
       type={message.type}
       hasDescription={!!message.description}
       style={style}
@@ -50,7 +50,7 @@ const Toast: React.FC<ToastProps> = ({ message, style }) => {
       <button onClick={() => removeToast(message.id)} type="button">
         <FiXCircle size={18} />
       </button>
-    </Container>
+    </S.Container>
   );
 };
 

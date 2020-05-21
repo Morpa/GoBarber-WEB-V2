@@ -16,7 +16,7 @@ import logoImg from '../../assets/logo.svg';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 
-import { Container, Content, AnimationContainer, Background } from './styles';
+import * as S from './styles';
 
 interface SignUpFormData {
   name: string;
@@ -75,11 +75,11 @@ const SignUp: React.FC = () => {
   );
 
   return (
-    <Container>
-      <Background />
+    <S.Container>
+      <S.Background />
 
-      <Content>
-        <AnimationContainer>
+      <S.Content>
+        <S.AnimationContainer>
           <img src={logoImg} alt="Logo GoBarber" />
 
           <Form ref={formRef} onSubmit={handleSubmit}>
@@ -103,9 +103,9 @@ const SignUp: React.FC = () => {
             <FiArrowLeft />
             Voltar para logon
           </Link>
-        </AnimationContainer>
-      </Content>
-    </Container>
+        </S.AnimationContainer>
+      </S.Content>
+    </S.Container>
   );
 };
 
