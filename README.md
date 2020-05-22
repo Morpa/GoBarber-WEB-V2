@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="GoStack" src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/bootcamp-header.png" width="200px" />
+     <img alt="GoStack" src="https://res.cloudinary.com/morpa/image/upload/v1589031637/MyFiles/goBarber_l3x7ny.svg" width="200px" />
 </h1>
 
 <h1 align="center">
