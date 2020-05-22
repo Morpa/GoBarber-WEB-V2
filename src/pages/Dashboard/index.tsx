@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FiPower, FiClock } from 'react-icons/fi';
 
 import * as S from './styles';
@@ -7,6 +7,7 @@ import logoImg from '../../assets/logo.svg';
 import { useAuth } from '../../hooks/auth';
 
 const Dashboard: React.FC = () => {
+  const [selectedDate, setSelectedDate] = useState(new Date());
   const { user, signOut } = useAuth();
 
   return (
@@ -51,6 +52,65 @@ const Dashboard: React.FC = () => {
               </span>
             </div>
           </S.NextAppointment>
+
+          <S.Section>
+            <strong>Manhã</strong>
+            <S.Appointment>
+              <span>
+                <FiClock />
+                09:00
+              </span>
+              <div>
+                <img
+                  src="https://avatars0.githubusercontent.com/u/15898709?s=60&v=4"
+                  alt="Andre"
+                />
+                <strong>ANdre</strong>
+              </div>
+            </S.Appointment>
+
+            <S.Appointment>
+              <span>
+                <FiClock />
+                09:00
+              </span>
+              <div>
+                <img
+                  src="https://avatars0.githubusercontent.com/u/15898709?s=60&v=4"
+                  alt="Andre"
+                />
+              </div>
+            </S.Appointment>
+          </S.Section>
+
+          <S.Section>
+            <strong>Tarde</strong>
+            <S.Appointment>
+              <span>
+                <FiClock />
+                09:00
+              </span>
+
+              <div>
+                <img
+                  src="https://avatars0.githubusercontent.com/u/15898709?s=60&v=4"
+                  alt="Andre"
+                />
+              </div>
+            </S.Appointment>
+            <S.Appointment>
+              <span>
+                <FiClock />
+                09:00
+              </span>
+              <div>
+                <img
+                  src="https://avatars0.githubusercontent.com/u/15898709?s=60&v=4"
+                  alt="Andre"
+                />
+              </div>
+            </S.Appointment>
+          </S.Section>
         </S.Schedule>
 
         <S.Calendar />
