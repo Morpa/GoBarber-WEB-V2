@@ -5,10 +5,10 @@ import MockAdapter from 'axios-mock-adapter';
 import api from '../../services/api';
 import ResetPassword from '../../pages/ResetPassword';
 
+const apiMock = new MockAdapter(api);
+
 const mockedHistoryPush = jest.fn();
 const mockedAddToast = jest.fn();
-
-const apiMock = new MockAdapter(api);
 
 jest.mock('react-router-dom', () => {
   return {
@@ -39,7 +39,6 @@ describe('ResetPassword Page', () => {
     const { getByPlaceholderText, getByText } = render(<ResetPassword />);
 
     apiMock.onPost('/password/reset').replyOnce(200);
-
     jest
       .spyOn(URLSearchParams.prototype, 'get')
       .mockImplementationOnce(() => 'token-jwt');
