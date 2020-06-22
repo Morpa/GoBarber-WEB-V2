@@ -112,7 +112,7 @@ const Profile: React.FC = () => {
         });
       }
     },
-    [addToast, history]
+    [addToast, history, updateUser]
   );
 
   const handleAvatarChange = useCallback(
@@ -155,10 +155,21 @@ const Profile: React.FC = () => {
           onSubmit={handleSubmit}
         >
           <S.AvatarInput>
-            <img src={user.avatar_url} alt={user.name} />
+            <img
+              src={
+                user.avatar_url ||
+                'https://api.adorable.io/avatars/186/abott@adorable.io.png'
+              }
+              alt={user.name}
+            />
             <label htmlFor="avatar">
               <FiCamera />
-              <input type="file" id="avatar" onChange={handleAvatarChange} />
+              <input
+                data-testid="input-file"
+                type="file"
+                id="avatar"
+                onChange={handleAvatarChange}
+              />
             </label>
           </S.AvatarInput>
 
